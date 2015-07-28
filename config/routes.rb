@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'uploader/photo'
 
-  root "users#new"
+
+  root :to => redirect('/photos')
+
+  get "uploader/photo" => "uploader#photo"
 
   get 'users/new'
 
