@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
 
-
   root :to => redirect('/photos')
 
-  get "uploader/photo" => "uploader#photo"
+  # get "uploader/photo" => "uploader#photo"
 
-  get 'users/new'
-
-  get 'users/show'
-
-  get 'user/new'
-
-  get 'user/show'
+  resources :users
 
   resources :photos
   # The priority is based upon order of creation: first created -> highest priority.
