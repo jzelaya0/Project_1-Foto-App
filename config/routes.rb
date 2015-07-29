@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "users#index"
+  root to: "sessions#index"
 
   # get "uploader/photo" => "uploader#photo"
   resources :sessions, only: [:new, :create, :destroy]
