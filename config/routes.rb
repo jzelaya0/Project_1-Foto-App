@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  root :to => redirect('/photos')
+  root to: "users#index"
 
   # get "uploader/photo" => "uploader#photo"
-
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users
 
   resources :photos

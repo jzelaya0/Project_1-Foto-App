@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authorize, only: :index
+  before_action :authorize, only: :index
 
   def index
     @users = User.all
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-      @user = User.new
+      @user = User.new(user_params)
       if @user.save
         redirect_to users_path
       else

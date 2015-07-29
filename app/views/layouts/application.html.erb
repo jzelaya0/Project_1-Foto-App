@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="center-block">
+<% flash.each do |name, message| %>
+     <div class="flash-message flash-message-<%= name %>">
+    <%= message %>
+   </div>
+<% end %>
+<% if current_user %>
+  <p>Hello, <%= current_user.email %></p>
+  <%= link_to 'Logout', session_path(session), method: :delete%>
+<%else%>
+  <%= link_to "Please Login", new_session_path, class:"btn btn-default"%>
+<%end%>
 <%= yield %>
-
-</body>
+</div>
 </html>
