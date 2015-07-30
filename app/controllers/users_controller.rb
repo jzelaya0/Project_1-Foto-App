@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authorize, only: :index
 
   def index
-    @users = User.all
+    @users = current_user.photos
   end
 
   def new
