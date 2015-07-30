@@ -1,19 +1,27 @@
 <!-- <p id="notice"><%= notice %></p> -->
+<div class="container-fluid">
+  <div class=" row">
+    <div class="col-md-4"></div>
+    <div class="col-sm-4">
+      <h3>
+        <strong>Title:</strong>
+        <%= @photo.title %>
+      </h3>
 
-<p>
-  <strong>Title:</strong>
-  <%= @photo.title %>
-</p>
+      <p>
+        <%= image_tag(@photo.photo_url, class: "img-thumbnail responsive")  if @photo.photo.present? %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @photo.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @photo.description %>
+      </p>
+      <div style="text-align: center">
+        <%= link_to 'Edit', edit_photo_path(@photo) %> |
+        <%= link_to 'Back', photos_path %>
+      </div>
+      <div class="col-md-4"></div>
 
-<p>
-  <strong>Photo:</strong>
-  <%= image_tag(@photo.photo_url, :width => 600) if @photo.photo.present? %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+    </div>
+  </div>
+</div>
