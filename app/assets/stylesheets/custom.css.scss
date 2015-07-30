@@ -1,0 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.banner-image {
+  background: url("black-and-white-man-person-hands.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  margin: -20px 0 0 0;
+}
+
+.sign-up-container {
+  max-width: 50%;
+}
