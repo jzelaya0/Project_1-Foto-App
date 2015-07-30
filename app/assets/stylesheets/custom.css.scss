@@ -1,16 +1,43 @@
+/*************************
+BOOTSTRAP
+*************************/
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+ /*************************
+GENERAL
+ *************************/
+h2 {
+  color: white;
+}
+ /*************************
+ BANNER IMAGES
+ *************************/
 .banner-image {
   background: url("landscape-mountains-nature-clouds.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 500px;
-  margin: -20px 0 0 0;
+}
+
+.login-banner{
+  background: url("black-and-white-man-person-hands.jpg") no-repeat center center;
 }
 
 .sign-up-container {
   max-width: 50%;
+}
+
+.banner-image,
+.login-banner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  
+}
+
+.navbar {
+  margin-bottom: 0;
+
 }
