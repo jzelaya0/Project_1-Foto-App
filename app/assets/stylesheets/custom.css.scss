@@ -9,23 +9,39 @@ BOOTSTRAP
  /*************************
 GENERAL
  *************************/
-h2 {
+
+.font-white {
   color: white;
+}
+
+.top-buffer {
+  margin-top: 100px;
+}
+
+.footer {
+  position:fixed;
+  padding: 15px;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  background:#333333;
+  color: #ABABAB;
+  text-align: center;
 }
  /*************************
  BANNER IMAGES
  *************************/
 .banner-image {
-  background: url("landscape-mountains-nature-clouds.jpg") no-repeat center center;
+  background: linear-gradient(#864135, transparent 90%),
+              linear-gradient(0deg, #1B1B1B, transparent),
+              #ffa949 url("landscape-mountains-nature-clouds.jpg") no-repeat center center;
 }
 
 .login-banner{
-  background: url("black-and-white-man-person-hands.jpg") no-repeat center center;
+  background: url("black-and-white-man-person-hands.jpg") center center no-repeat;
 }
 
-.sign-up-container {
-  max-width: 50%;
-}
 
 .banner-image,
 .login-banner {
@@ -33,13 +49,27 @@ h2 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 400px;
+  height: 1400px;
 
 }
 
 .navbar {
   margin-bottom: 0;
+  background-color: #3C3C3C;
+  border: none;
+  border-radius: 0;
 
+}
+
+
+/*************************
+HOME PAGE INFO CONTENT
+*************************/
+
+.content {
+  height: 120px;
+  background-color: white;
+  margin-top: 100px;
 }
 
 

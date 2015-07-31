@@ -1,8 +1,8 @@
 <div class="banner-image container-fluid"> <!--BANNER  START-->
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
-      <h2>Sign Up</h2>
-      <div class="form-group">
+      <h2 class="font-white">Sign Up</h2>
+      <div class="form-group font-white">
       <%= form_for @user do |f| %>
           <% if @user.errors.any? %>
             <div class="error_messages text-danger">
@@ -34,5 +34,35 @@
       <%end%>
 
     </div>
+  </div><!--BANNER  END-->
+  <div class="content row">
+      <h1 class="text-center"><small>"A great app to store your photos!"</small></h1>
+      <p class="text-center"><small>- Jesse Zelaya</small></p>
   </div>
-</div><!--BANNER  END-->
+  <div class="row font-white">
+    <div class="top-buffer col-md-4">
+      <h2 class="text-center">Easy</h2>
+      <p>
+        Porchetta ground round shank ribeye tail. Pastrami leberkas prosciutto
+        strip steak, short loin shoulder turkey jowl bacon tri-tip doner pork
+        loin. Pork belly kielbasa chuck brisket.
+      </p>
+    </div>
+    <div class="top-buffer  col-md-4">
+      <h2 class="text-center">Fast</h2>
+      <p>
+        Kevin corned beef frankfurter, turkey porchetta tail pork rump jerky pig.
+        Sausage bresaola hamburger, porchetta pork loin landjaeger tongue
+        chicken frankfurter leberkas beef ribs ribeye.
+    </div>
+    <div class="top-buffer col-md-4">
+      <h2 class="text-center">Safe</h2>
+      <p>
+        Andouille swine ball tip tongue prosciutto corned beef pork. Venison corned
+        beef cow, salami bacon jerky biltong sausage. Porchetta tenderloin
+        chicken spare ribs sausage bacon leberkas shankle ham hock, hamburger
+        beef ribs cow pork chop pig.
+      </p>
+    </div>
+  </div>
+</div>
