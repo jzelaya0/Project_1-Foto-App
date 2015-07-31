@@ -1,0 +1,17 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="container">
+      <h1>Discover Photos</h1>
+      <h1><small>Get Inspired</small></h1>
+
+      <div class="row">
+          <% @photos.each do |photo| %>
+          <div class="col-sm-6 col-md-4">
+              <div><h1><small> <%= photo.title %></small></h1></div>
+              <%= image_tag photo.photo_url(:thumb), class: "img-thumbnail responsive" if photo.photo?%>
+              <p><%= photo.description %></p>
+              <!-- Edit Delete And Show Buttons -->
+                <span><%= link_to 'Show', photo, class:"btn btn-default" %></span>
+            </div>
+            <% end %>
+      </div>
+</div>
