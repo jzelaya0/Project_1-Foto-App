@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
 
-  get 'posts/index'
+  # get 'posts/index'
+  #
+  # get 'posts/new'
+  #
+  # get 'posts/show'
 
-  get 'posts/new'
-
-  get 'posts/show'
 
   root to: "users#new"
 
   # get "uploader/photo" => "uploader#photo"
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
+
+  get 'photos/home' => 'photos#home', as: :home
 
   resources :photos
   # The priority is based upon order of creation: first created -> highest priority.

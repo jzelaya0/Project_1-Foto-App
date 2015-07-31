@@ -13,6 +13,10 @@ class PhotosController < ApplicationController
   def show
   end
 
+  def home
+    @photos = Photo.all
+  end
+
   # GET /photos/new
   def new
     @photo = Photo.new
