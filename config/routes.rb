@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'posts/index'
+
+  get 'posts/new'
+
+  get 'posts/show'
+
   root to: "users#new"
 
   # get "uploader/photo" => "uploader#photo"
