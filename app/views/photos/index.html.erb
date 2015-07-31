@@ -1,21 +1,21 @@
 <!-- <p id="notice"><%= notice %></p> -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-4">
-      <%= link_to 'New Photo', new_photo_path, class:"btn btn-default" %>
-      <h1>My Photos</h1>
-          <% @photos.each do |photo| %>
+<div class="container">
+      <!-- <%= link_to 'New Photo', new_photo_path, class:"btn btn-default center-block" %> -->
+      <!-- <h1>My Photos</h1> -->
 
-              <div class="row"> <h1><small> <%= photo.title %></small></h1></div>
-              <div class="row"><%= image_tag photo.photo_url(:thumb), class: "img-thumbnail responsive" if photo.photo?%></div>
-              <div class="row"><p><%= photo.description %></p></div>
+      <div class="row">
+          <% @photos.each do |photo| %>
+          <div class="col-sm-6 col-md-4">
+              <div><h1><small> <%= photo.title %></small></h1></div>
+              <%= image_tag photo.photo_url(:thumb), class: "img-thumbnail responsive" if photo.photo?%>
+              <p><%= photo.description %></p>
               <!-- Edit Delete And Show Buttons -->
-              <div class="row">
+              <!-- <div class="row"> -->
                 <span><%= link_to 'Show', photo, class:"btn btn-default" %></span>
                 <span><%= link_to 'Edit', edit_photo_path(photo), class:"btn btn-info" %></span>
                 <span><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></span>
-              </div>
-          <% end %>
-    </div>
-  </div>
+              <!-- </div> -->
+            </div>
+            <% end %>
+      </div>
 </div>
