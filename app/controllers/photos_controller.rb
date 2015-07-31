@@ -5,6 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = current_user.photos
+    @user = current_user.email
   end
 
   # GET /photos/1
